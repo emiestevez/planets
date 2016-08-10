@@ -34,7 +34,7 @@ public class Lluvia {
         return pico > picoMaximoDeLluvia ? true : false;
     }
 
-    public void definirNuevoPico(Date dia, double pico) {
+    private void definirNuevoPico(Date dia, double pico) {
         this.diaPicoDeLluvia = dia;
         picoMaximoDeLluvia = pico;
     }
