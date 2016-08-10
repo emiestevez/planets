@@ -6,7 +6,7 @@ import java.util.Date;
 public class Lluvia {
     private Date diaPicoDeLluvia;
 
-    private double cantidad;
+    private double picoMaximoDeLluvia;
 
     private int cantidadDiaDeLluvia;
 
@@ -31,17 +31,17 @@ public class Lluvia {
 
     private boolean isPicoDeIntensidad(Date dia, double pico) {
         if (dia == null) return true;
-        return pico > cantidad ? true : false;
+        return pico > picoMaximoDeLluvia ? true : false;
     }
 
     public void definirNuevoPico(Date dia, double pico) {
         this.diaPicoDeLluvia = dia;
-        cantidad = pico;
+        picoMaximoDeLluvia = pico;
     }
 
     public void emitirReporte() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY");
-        System.out.println("El pico maximo de lluvia es de " + MathUtils.round(cantidad) + " y fue el dia " + simpleDateFormat.format(diaPicoDeLluvia));
+        System.out.println("Cantidad de dias de lluvia: " + cantidadDiaDeLluvia + ". El dia del pico maximo es el " + simpleDateFormat.format(diaPicoDeLluvia));
     }
 
 }
