@@ -13,7 +13,7 @@ public class Lluvia {
     public Lluvia() {
     }
 
-    public void pronostico(Planet planetaA, Planet planetaB, Planet planetaC, Date dia) {
+    public void generarPronostico(Planet planetaA, Planet planetaB, Planet planetaC, Date dia) {
         boolean estaLloviendo = PlanetaUtils.estaElSolDentroDelTrianguloFormadoPorLosPlanetas(planetaA, planetaB, planetaC);
 
         if (estaLloviendo) {

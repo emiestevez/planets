@@ -18,9 +18,9 @@ public class Clima {
         DateTime hoy = new DateTime();
 
         while (!hoy.isAfter(fechaMaximaPronostico)) {
-            sequia.pronosticarDeAcuerdoALaPosicionDeLosPlanetas(planetaA, planetaB, planetaC);
-            temperatura.isPresionYTemperaturaOptima(planetaA, planetaB, planetaC);
-            lluvia.pronostico(planetaA, planetaB, planetaC, hoy.toDate());
+            sequia.generarPronostico(planetaA, planetaB, planetaC);
+            temperatura.generarPronostico(planetaA, planetaB, planetaC);
+            lluvia.generarPronostico(planetaA, planetaB, planetaC, hoy.toDate());
 
             planetaA.desplazar();
             planetaC.desplazar();
