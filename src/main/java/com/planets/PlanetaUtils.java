@@ -14,14 +14,14 @@ public final class PlanetaUtils {
         return MathUtils.round(dAB) + MathUtils.round(dBC) == MathUtils.round(dAC);
     }
 
-    private static double getDistance(Coordenadas positionA, Coordenadas positionB) {
+    private static double getDistanciaEntrePlanetas(Coordenadas positionA, Coordenadas positionB) {
         return Math.hypot(positionB.getX() - positionA.getX(), positionB.getY() - positionA.getY());
     }
 
     public static double getPerimetro(Coordenadas positionA, Coordenadas positionB, Coordenadas positionC) {
-        double longitudA = getDistance(positionA, positionB);
-        double longitudB = getDistance(positionB, positionC);
-        double longitudC = getDistance(positionA, positionC);
+        double longitudA = getDistanciaEntrePlanetas(positionA, positionB);
+        double longitudB = getDistanciaEntrePlanetas(positionB, positionC);
+        double longitudC = getDistanciaEntrePlanetas(positionA, positionC);
 
         return longitudA + longitudB + longitudC;
     }
