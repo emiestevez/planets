@@ -17,7 +17,8 @@ public class Lluvia {
         boolean estaLloviendo = PlanetaUtils.estaElSolDentroDelTrianguloFormadoPorLosPlanetas(planetaA, planetaB, planetaC);
 
         if (estaLloviendo) {
-            evaluarCantidadLluvia(dia, PlanetaUtils.getPerimetro(planetaA.getCoordenadas(), planetaB.getCoordenadas(), planetaC.getCoordenadas()));
+            double cantidadLluvia = PlanetaUtils.getPerimetro(planetaA.getCoordenadas(), planetaB.getCoordenadas(), planetaC.getCoordenadas());
+            evaluarCantidadLluvia(dia, cantidadLluvia);
             cantidadDiaDeLluvia++;
         }
     }
@@ -38,7 +39,7 @@ public class Lluvia {
         cantidad = pico;
     }
 
-    public void reporte() {
+    public void emitirReporte() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY");
         System.out.println("El pico maximo de lluvia es de " + MathUtils.round(cantidad) + " y fue el dia " + simpleDateFormat.format(diaPicoDeLluvia));
     }
