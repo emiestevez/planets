@@ -30,7 +30,7 @@ public class Clima {
         }
 
         sequia.emitirReporte();
-        temperatura.emitirReporte();
         lluvia.emitirReporte();
+        temperatura.emitirReporte();
     }
 }

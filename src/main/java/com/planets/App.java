@@ -14,8 +14,8 @@ public class App
         DateTime tenYear = today.plusYears(10);
 
         Planet feringi = new Ferengi();
-        Betasoide betasoide = new Betasoide();
-        Vulcano vulcano = new Vulcano();
+        Planet betasoide = new Betasoide();
+        Planet vulcano = new Vulcano();
 
         Clima clima = new Clima();
         clima.pronosticarTiempo(tenYear, feringi, vulcano, betasoide);
